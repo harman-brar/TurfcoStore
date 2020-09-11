@@ -15,7 +15,6 @@ class TurfcoStore extends StatelessWidget {
         primarySwatch: Colors.green,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      initialRoute: '/home',
       home: MyScaffold(),
     );
   }

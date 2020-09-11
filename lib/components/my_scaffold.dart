@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:turfco_store/account_screen.dart';
+import 'package:turfco_store/cart_screen.dart';
 import 'package:turfco_store/components/turfco_app_bar.dart';
 import 'package:turfco_store/home_screen.dart';
 import 'package:turfco_store/categories_screen.dart';
@@ -29,11 +30,7 @@ class _MyScaffoldState extends State<MyScaffold> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Turfco',
-          style: TextStyle(color: Colors.lightGreenAccent),
-        ),
-      ),
+      appBar: TurfcoAppBar(),
       body: _children[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.white,
@@ -44,7 +41,7 @@ class _MyScaffoldState extends State<MyScaffold> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.list),
-            title: Text('Explore'),
+            title: Text('Categories'),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.account_circle),
